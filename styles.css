@@ -305,13 +305,8 @@ nav{
 
  /* fin tarjetas en programacion */
 
- /* inicio clases blog */
 
- .container .content .image img{
-  max-width: 100%;
- }
 
- /* final de blog */
 
  /* inicio de clases cada proyecto ( como calc, o java) */
 
@@ -336,6 +331,16 @@ div h1 {
  }
  
  /* finsl de clases cada proyecto */
+
+ /* inicio de clases blog  */
+ .imagen-blog1 img{
+  max-width: 100%;
+  height: 100%
+  
+}
+
+/* fin clases blog  */
+
  /* inicio de clases blog2  */
  .blog2-container{
   display: flex;
@@ -423,7 +428,7 @@ div h1 {
       color: white; 
     }
 
-
+  
      
      
      /* finclases de mas articulos  */
@@ -577,8 +582,9 @@ div h1 {
     }
     /* inicio de clases de blog 2 para left2  */
    .blog2-left2 img{
-    max-width: 100%;
-    margin-left:0px ;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
    }
    /* inicio de clases de blog 2 para left2  */
   }
@@ -679,16 +685,7 @@ div h1 {
     text-decoration: none;
   }
 
-  /* inicio de blog */
 
-  .container .content .image img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-   }
-
-   
-  /* fin de blog  */
 
   /* inicio de cada proyecto como calc o jaja */
 
@@ -763,10 +760,16 @@ div h1 {
       flex: 1;
       padding: 1em;
      }
-     
+  
      .blog2-right2 {
       flex: 1;
       padding: 1em;
+     }
+
+     .blog2-left2 img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
      }
 
      /* inicio clases para parrafos sencillos de blog2  */
@@ -832,11 +835,15 @@ div h1 {
 
    .blog2-para-text{
     margin-top: 2%;
+    
   }
   .blog2-left2 img{
-    display: flex;
-    max-width: 50%;
-    margin-left: 30%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .blog2-right2{
+    font-size:larger;
   }
 
 
@@ -849,16 +856,24 @@ div h1 {
    
    /* inicio de clases 1440px  */
    @media screen and (min-width: 1440px){
-    .blog2-left2 img{
-      display: flex;
-      max-width: 30%;
-      margin-left: 40%;
-    }
+
     .footer{
       max-width: 100%;
       margin-left: 0%;
     }
    /* fin de clases 1440px  */
+   /* inicio de clases blog2  */
+   .blog2-left2{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+   }
+
+   .blog2-para-text2{
+    margin-top: 15%;
+    margin-bottom: 10%;
+   }
+
   }
    
 
