@@ -338,11 +338,13 @@ div h1 {
 }
 
 .image-blog1 img {
-  width: 100%; 
-  max-width: 100%; 
-  height: auto; 
-  display: block; 
-  margin: 0 auto; 
+  width: 100%; /* La imagen ocupará todo el ancho disponible del contenedor */
+  max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+  height: auto; /* Mantiene la proporción de aspecto de la imagen */
+  max-height: 350px; /* Establece una altura máxima para la imagen */
+  object-fit: cover; /* La imagen se ajustará dentro de su contenedor sin perder la proporción */
+  display: block; /* La imagen se convierte en un bloque para ocupar todo el ancho disponible */
+  margin: 0 auto; /* Centra la imagen horizontalmente dentro del contenedor */
 }
 
 
@@ -384,61 +386,67 @@ div h1 {
 
      /* inicio clases de mas articulos  */
 
-     .container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1em;
-      position: relative;
-     }
-     
-     .background-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.5; 
-     }
-     
-     .column {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      padding: 2em; 
-     }
-     
-     .ancla-credits {
-      color: white; 
-      margin: 1em 0; 
-      position: relative;
-      z-index: 1;
-      text-decoration: none;
-    }
+     /* Estilos para el contenedor principal */
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  overflow: hidden; 
+}
 
-     .ancla-credits p{
-      font-size:small;
-      text-align: center;
-     }
-     /* animacion enlaces de mas articulos  */
+/* Estilos para la imagen de fondo */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5; 
+  z-index: -1; 
+}
 
-     .ancla-credits {
-      transition: transform 0.3s ease-in-out;
-      display: block;
-      margin-bottom: 10px;
-    }
-  
-    
-    .ancla-credits:hover {
-      transform: scale(1.4); 
-      color: white; 
-    }
+/* Estilos para cada columna */
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  padding: 2em; 
+}
 
-  
+/* Estilos para los enlaces */
+.ancla-credits {
+  color: white; 
+  margin: 1em 0; 
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.ancla-credits p {
+  font-size: small;
+  text-align: center;
+}
+
+/* Estilos adicionales para los enlaces */
+.ancla-credits:hover {
+  transform: scale(1.4); 
+  color: white; 
+}
+
+/* Ajuste para la lista vertical */
+.ancla-credits {
+  display: block; 
+  text-align: center; 
+  margin: 10px auto; 
+}
+
      
      
-     /* finclases de mas articulos  */
+     /* fin clases de mas articulos  */
 
 
 
@@ -722,6 +730,28 @@ div h1 {
    }
 
   /* fin cada proyecto como calc o java */
+
+  /* inicio clases blog 768px */
+  .content-blog1-inv {
+    display: flex; /* Utilizamos flexbox para alinear los elementos horizontalmente */
+    flex-direction: row-reverse; /* Invertimos el orden de los elementos, colocando la imagen a la derecha */
+  }
+
+  .text-blog1.inv {
+    flex: 1; /* Permitimos que el texto ocupe el espacio restante */
+    margin-right: 20px; /* Añadimos un margen derecho para separar el texto de la imagen */
+  }
+
+  .image-blog1.inv {
+    max-width: 50%; /* Establecemos un ancho máximo para la imagen */
+    margin-left: auto; /* Centramos la imagen horizontalmente en el contenedor */
+  }
+
+  .p-responsively-768{
+    margin-left: 15%;
+  }
+  /* fin clases blog 768px  */
+
     /* inicio de blog 2 invertidas  */
 
     /* inicio de clases para section de arriba blog2*/
@@ -829,6 +859,14 @@ div h1 {
      h1{
       font-size: large;
      }
+     .p-responsively-768{
+      margin-top: 5%;
+    }
+    /* inicio de clases blog invertido  */
+    .content-blog1-inv .img-inv {
+      max-height: 200px;
+    }
+    /* fin de clases blog invertido  */
      
 
     /* fin de blog.html  */
@@ -856,6 +894,9 @@ div h1 {
 
    /* fin de clases de blog 2 para section 2 abajo  */
 
+   .footer{
+    margin: 0 0 0 0 ;
+   }
    }
 
     /* fin responsive 1024 */
